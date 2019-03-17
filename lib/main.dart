@@ -8,9 +8,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Startup Name Generator',
-      theme: new ThemeData(
-        primaryColor: Colors.white,
-      ),
+//      theme: new ThemeData(
+//        primaryColor: Colors.white,
+//      ),
+      theme: new ThemeData.dark(),//更改app主题为dark，类似于夜间模式
       home: new RandomWords(),
     );
   }
@@ -31,7 +32,7 @@ class RandomWordsState extends State<RandomWords> {
       appBar: new AppBar(
         title: new Text('Startup Name Generator'),
         actions: <Widget>[
-          new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
+          new IconButton(icon: new Icon(Icons.line_style), onPressed: _pushSaved),
         ],
       ),
       body: _buildSuggestions(),
